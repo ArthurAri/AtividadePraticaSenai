@@ -1,0 +1,243 @@
+:root{
+    --header-altura: calc(38px + 2vw);
+}
+
+h1{
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 4rem;
+}
+
+body{
+    display: grid;
+    grid-template-rows: var(--header-altura) auto;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.fixador{
+    position: sticky;
+    display: flex;
+}
+
+.header{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    background: var(--azul);
+    color: var(--branco);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icone{
+    display: block;
+
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+    font-size: 10rem;
+}
+
+.header__menu__rotulo{
+    display: block;
+
+    aspect-ratio: 1 / 1;
+    height: var(--header-altura);
+}
+
+.header__icone-menu{
+    background-image: url('../img/icones/menu_icone.svg');
+}
+
+.botao-perfil__icone{
+    background-image: url("../img/icones/perfil_icone.svg");
+}
+
+.header__menu-hamburger{
+    position: absolute;
+
+    z-index: -1;
+
+    color: white;
+    background-color: var(--azul-claro);
+    font-size: 1em;
+    width: 60%;
+    min-width: max-content;
+    
+    animation-name: anim-hide-to-up;
+    animation-duration: 0.5s;
+}
+
+.header__menu-hamburger__item{
+    z-index: -1;
+    text-decoration: none;
+    display: block;
+    color: var(--branco-texto);
+    
+    padding: 0.2em;
+    font-size: 1.5em;
+    padding-right: 1em;
+    text-transform: uppercase;
+}
+
+.logo{
+    object-fit: cover;
+    height: var(--header-altura);
+    aspect-ratio: 3 / 1;
+    background-size: 85%;
+    background-image: url('../img/logos/eptran_logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header__menu__botoes{
+    margin-top: 20px;
+}
+
+.header__botao{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-weight: 100;
+    font-size: 1.2em;
+    color: inherit;
+    text-decoration: none;
+    background-color: inherit;
+}
+
+.header__botao p,
+.header__botao h1,
+.header__botao h2,
+.header__botao h3,
+.header__botao h4,
+.header__botao h5,
+.header__botao h6 {
+    padding-left: 1rem;
+}
+
+.header__botao-desta-pagina{
+    box-sizing: border-box;
+    background-color: var(--azul-claro);
+    border-bottom: 4px solid var(--branco);
+    padding-top: 4px;
+}
+
+.header__botao hr {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.header__usuario{
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 0.3em;
+
+    background: url("../img/icones/perfil_icone.svg") no-repeat center;
+    background-size: 80%;
+}
+
+.header__usuario img{
+    height: 80%;
+}
+
+/* Hover*/
+.header__botao:hover, .header__icone-menu:hover{
+    background-color: var(--azul-claro);
+}
+
+.header__menu-hamburger__item:hover{
+    background-color: var(--azul-extra-claro);
+}
+
+/*Ocultar menus*/
+.header__menu,
+.header__menu__botoes, .header__menu-usuario,.secao-conta,
+.header__menu-hamburger, .header__menu-hamburger-botao, 
+.header__menu-usuario-botao,
+.header__direita {
+    display: none;
+}
+
+.botao-logout{
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.botao-logout__icone{
+    background-image: url("../img/icones/logout_icone.svg");
+}
+
+/*Exibir menus*/
+.header__menu-hamburger-botao:checked ~ .header__menu-hamburger{
+    display: block;
+    
+    animation-name: anim-go-dowm;
+    animation-duration: 0.5s;
+}
+
+.header__menu-usuario-botao:checked ~ .header__menu-usuario{
+    display: flex;
+    
+    animation-name: anim-go-left;
+    animation-duration: 0.5s;
+}
+
+/*Reaçar botões quando ativos*/
+.header__menu-hamburger-botao:checked ~ .header__menu__rotulo{
+    background-color: var(--azul-extra-claro);
+}
+
+@media (min-width : 900px) {
+
+    .header__usuario, .logo{
+        width: 100%;
+    }
+    .menu__container, .header__usuario{
+        display: none;
+    }
+    .header__menu{
+        display: block;
+    }
+    body{
+        grid-template-rows: auto;
+        grid-template-columns:230px auto;
+    }
+    .logo{
+        height: auto;
+    }
+    .header{
+        flex-direction: column;
+    }
+    .header__menu{
+        flex-direction: column;
+        height: 30%;
+        justify-content: space-between;
+        font-size: 1em;
+    }
+    .botao-logout{
+        
+    }
+    .secao-conta, .header__menu__botoes{
+        display: block;
+    }
+}
+
+/* Animations */
+@keyframes anim-go-dowm {
+    from { top: -100px;}
+    to { top: var(--header-altura);}
+}
+@keyframes anim-hide-to-up {
+    from { top: var(--header-altura); display: block;}
+    to { top: -200%;}
+}

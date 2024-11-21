@@ -1,0 +1,26 @@
+@import url('reset.css');
+@import url('styles/header.css');
+@import url('styles/footer.css');
+@import url('styles/paleta.css');
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+.corpo{
+    padding: 2rem 2rem;
+}
+
+main {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+p{
+    font-size: inherit;
+    font-weight: inherit;
+}

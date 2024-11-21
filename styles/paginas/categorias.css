@@ -1,0 +1,79 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    background: url('../../img/backgrounds/desenho-pagina-principal.svg') no-repeat;
+    background-size: calc(150% - 50vw);
+    background-position: center bottom calc(min(45vh - 35vw, 0px));
+    object-fit: scale-down;
+    background-color: rgb(168, 224, 255);
+}
+.categorias{
+    margin-top: 2vw;
+}
+.categorias>h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+.categorias__botoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: .1em;
+    gap: .5em;
+    padding-top: 1em;
+}
+.categorias__botoes__botao>h2{
+    font-size: 1.5em;
+}
+.categorias__botoes__botao{
+    text-decoration: none;
+    color: var(--preto-texto);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 10vh;
+    text-align: center;
+    padding: 1em;
+    background: rgba(255,255,255,.8);
+    border-radius: 9px;
+}
+
+#infantil:not(:active){
+    border-bottom: 4px solid red;
+}
+
+#fundamental:not(:active){
+    border-bottom: 4px solid orange;
+}
+
+#medio:not(:active){
+    border-bottom: 4px solid rgb(1, 192, 58);
+}
+
+.categorias__botoes__botao:active{
+    border: none;
+    border-top: 4px solid rgb(183, 183, 183);
+}
+    
+@media screen and (min-width : 700px) {
+    .categorias__botoes{
+        flex-direction: row;
+        gap: 1%;
+    }
+    .categorias__botoes__botao{
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width : 900px) {
+    main{
+        background-size: calc(115% - 10vw);
+        background-position: center bottom calc(min(45vh - 30vw, 0px));
+    }
+}

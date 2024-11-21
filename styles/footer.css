@@ -1,0 +1,31 @@
+:root{
+    --footer-altura: 60px;
+}
+
+.footer__container{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contato{
+}
+
+.footer{
+    height: var(--footer-altura);
+    padding: .5rem 2rem;
+    background-color: var(--azul-claro);
+    color: var(--branco-texto);
+}
+
+.logos{
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer__degrade{
+    background: var(--gradiente-footer);
+    height: 50px;
+    width: 100%;
+}

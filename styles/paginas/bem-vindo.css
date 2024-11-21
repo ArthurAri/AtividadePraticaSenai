@@ -1,0 +1,37 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.bloco{
+    border-radius: 1rem;
+    box-shadow: black 2px 2px 3px;
+    padding: 1rem;
+    width: 20%;
+}
+
+.botao{
+    border-radius: .5rem;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+section{
+    padding-top: 35vh;
+    display: flex;
+    justify-content: center;
+}
+
+.azul{
+    background-color: rgb(74, 74, 255);
+    color: white;
+}
