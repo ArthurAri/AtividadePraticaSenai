@@ -1,5 +1,11 @@
 <?php
   $nome_professor = "Professor(a)"; // Ia fazer melhor ainda
+  session_start(); 
+  if ($_SESSION == null) 
+        echo '<script>
+        alert("Faça login para acessar essa pagina.");
+            window.location.href="index.php";
+        </script>';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles/paginas/login.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -105,7 +110,7 @@
             <p class="especial">Querido(a) <?php echo $nome_professor; ?>,</p>
             <p>Você é a chave para o sucesso e para o futuro de muitos alunos. Seu trabalho faz toda a diferença na vida de quem você ensina. Hoje, queremos que saiba que sua dedicação, paciência e esforço são grandemente apreciados. Obrigado por ser um exemplo de perseverança e paixão pela educação.</p>
             <p>Continue sendo essa inspiração para todos ao seu redor!</p>
-            <p>Antenciosamente, ChatGPT</p>
+            <p>Escripoto por ChatGPT</p>
         </div>
         <footer>
             <p>&copy; 2024 - Agradecemos o seu trabalho e dedicação!</p>

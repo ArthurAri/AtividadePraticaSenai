@@ -14,7 +14,7 @@
     $senha = $_POST["senha"];
     
     if ($gravar == "login"){
-        $get = "SELECT * FROM usuarios WHERE usuario = '$usuario' and senha = '$senha'";
+        $get = "SELECT * FROM Professores WHERE nome = '$usuario' and senha = '$senha'";
         $executar_get = $conn->query($get) or throw mysqli_error("Not found");
         $row = $executar_get->fetch_assoc();
 
@@ -24,7 +24,7 @@
             $_SESSION['nome'] = $row["nome"];
             $_SESSION['email'] = $row["email"];
             echo "Logar com " . $row['email'];
-            header("Location: ../eptran.php");
+            header("Location: ../turmas.php");
         }
         else{
             echo '<script>

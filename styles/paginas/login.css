@@ -1,8 +1,12 @@
+@import url('../../reset.css');
+@import url('../paleta.css');
 
 .corpo {
-    overflow-x: scroll;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
 }
 
 .caixa {
@@ -59,6 +63,7 @@
 
 .entrar {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
