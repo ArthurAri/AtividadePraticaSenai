@@ -24,7 +24,7 @@
             $_SESSION['nome'] = $row["nome"];
             $_SESSION['email'] = $row["email"];
             echo "Logar com " . $row['email'];
-            header("Location: ../turmas.php");
+            header("Location: ../atividades.php");
         }
         else{
             echo '<script>

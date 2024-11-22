@@ -22,13 +22,12 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        main {
-            background-color: white;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        main{
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .especial {
@@ -74,9 +73,6 @@
                         <a href="professor.php" class="header__botao">
                             <h2>Professor</h2>
                         </a>
-                        <a href="adm.php" class="header__botao">
-                            <h2>Administração</h2>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -97,10 +93,10 @@
                     <div class="icone botao-perfil__icone"></div>
                     <p>Perfil</p>
                 </div>   
-                <div class="botao-logout header__botao">
+                <a class="botao-logout header__botao" href="./php/logout.php">
                     <div class="icone botao-logout__icone"></div>
                     <p>Sair da conta</p>
-                </div>
+                </a>
             </div>
         </div>
     </header>

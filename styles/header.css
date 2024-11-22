@@ -3,8 +3,8 @@
 }
 
 h1{
-    padding: 1rem 1rem 1rem 1rem;
-    font-size: 4rem;
+    padding: .5rem;
+    font-size: 2rem;
 }
 
 body{
@@ -198,6 +198,9 @@ body{
 }
 
 @media (min-width : 900px) {
+    h1{
+        font-size: 4rem;
+    }
 
     .header__usuario, .logo{
         width: 100%;

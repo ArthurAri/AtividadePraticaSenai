@@ -31,7 +31,7 @@
         $_SESSION['email'] = $email;
         
         echo "Cadastro Concluido";
-        header("Location: ../eptran.php");
+        header("Location: ../atividades.php");
     }
     if ($gravar == "alterar"){
         $update = "UPDATE usuarios SET nome = '$nome', usuario = '$usuario', email = '$email', senha = '$senha' WHERE id = '$id'";
